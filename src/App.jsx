@@ -1,32 +1,33 @@
 import React from 'react';
 import styles from './App.module.css';
-import { AboutMe } from './AboutMe';
-import { Top10 } from './Top10';
-import { CookieClicker } from './cookieclicker';
-import { Pokemon } from './pokemon';
+import { Routes, Route,Link } from 'react-router';
+import { About } from './About';
+import { Games } from './Games'
+import { Contact } from './Contact'
 
 function App() {
   return (
-    
+
     <main className="min-h-screen bg-white p-8">
       <nav className={styles.navbar}>
-	<ul className={styles.list}>
-	<li className={styles.listItem}>
-		<a href="#">Home</a>
-	</li>
-	<li className={styles.listItem}>
-		<a href="/about">About</a>
-	</li>
-	<li className={styles.listItem}>
-		<a href="/contact">Contact</a>
-	</li>
-  </ul>
-</nav>
+        <ul className={styles.list}>
+          <li className={styles.listItem}>
+          <Link to="/">Home</Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link to="/games">Games</Link>
+          </li>
+          <li className={styles.listItem}>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
 
 
-<Routes>
+      <Routes>
         <Route index element={<About />} />
-        <Route path="/games" element={<Games/>} />
+        <Route path="/games" element={<Games />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </main>
   );
