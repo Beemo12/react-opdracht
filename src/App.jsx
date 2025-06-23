@@ -1,9 +1,14 @@
-import './App.css'
+import React from 'react';
+import { AboutMe } from './AboutMe';
+import { Top10 } from './Top10';
 
 function App() {
   return (
-    <h1>Hello world</h1>
-  )
+    <main className="min-h-screen bg-white p-8">
+      <AboutMe />
+      <Top10 />
+    </main>
+  );
 }
 
-export default App
+export default App;
