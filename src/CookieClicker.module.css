@@ -1,0 +1,13 @@
+.cookieClicker {
+    text-align: center;
+    padding: 20px;
+}
+
+.cookie {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 50%;
+    background: brown;
+    cursor: pointer;
+}
